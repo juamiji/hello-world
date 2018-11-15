@@ -46,15 +46,7 @@ cd "$data"
 
 	use "$Relca10/Rcomunidades_2010.dta", clear
 	merge 1:m consecutivo_c using "$Relca10/Rhogar_2010.dta", nogen 
-	merge 1:m consecutivo using "$Relca10/Rpersonas_2010.dta", keep(3) nogen keepus(orden-parentesco educ_padre educ_madre enfermedad_* depresion_* )
-	merge 1:1 llave_ID_lb using "$Relca10/Rniñosde0a9_2010.dta", keep(3) nogen
-	merge m:1 consecutivo using `rjinfo', keep(3) nogen
-	append using `rola2', force 
-	tempfile rural
-	save `rural', replace 
-
-*--------------
-*Pegue URBANO:
+aaaaaaaaaaaaaaaa
 *--------------
 	use "$Uelca16/Ucomunidades_2016.dta", clear
 	merge 1:m consecutivo_c using"$Uelca16/Uhogar_2016.dta", keep(2 3) nogen
